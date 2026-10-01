@@ -40,7 +40,7 @@ def load():
     return pd.concat(frames, ignore_index=True)
 
 
-def clean(a):
+def clean(a, last=LAST):
     """Documented rules, counted. Test-level rules first, then one row per test vehicle."""
     steps = [("test results, model years 2012-2026", len(a))]
     rules = [
@@ -55,8 +55,8 @@ def clean(a):
         steps.append((name, int(keep.sum())))
     t = a[keep].sort_values("year").drop_duplicates("Test Number")      # a carried-over test counts once, in its first year
     steps.append(("each test once, in its first model year (carry-overs dropped)", len(t)))
-    t = t[t["year"].between(FIRST, LAST)]
-    steps.append((f"first tested {FIRST}-{LAST} (2026 is a partial early release)", len(t)))
+    t = t[t["year"].between(FIRST, last)]
+    steps.append((f"first tested {FIRST}-{last} (2026 is a partial early release)", len(t)))
 
     t = t.assign(gpm=100 / t["RND_ADJ_FE"])
     key = ["year", "Test Vehicle ID", "Test Veh Configuration #"]
@@ -162,8 +162,13 @@ def physics(f):
 def main():
     out = HERE / "results"
     out.mkdir(exist_ok=True)
-    v, steps = clean(load())
+    a = load()
+    v, steps = clean(a)
     (out / "cleaning.json").write_text(json.dumps(steps, indent=1) + "\n")
+    v26, _ = clean(a, last=2026)                       # why 2026 is left out: same rules, compare its mix with 2025's
+    s26 = v26[v26["sample"] & v26["year"].isin([2025, 2026])].groupby("year").agg(
+        vehicles=("gpm", "size"), mean_weight=("weight", "mean"), mean_hp=("hp", "mean"), cvt_share=("trans", lambda x: (x == "CVT").mean()))
+    (out / "partial_2026.json").write_text(json.dumps(s26.round(3).to_dict(orient="index"), indent=2) + "\n")
     for name, n in steps:
         print(f"{n:8,}  {name}")
     f = features(v[v["sample"]])
