@@ -1,0 +1,9 @@
+cycle,term,elasticity,lo,hi,n
+city,log_weight,0.3372,0.1891,0.4854,6341
+city,log_hp,0.4522,0.4067,0.4977,6341
+city,log_c,0.1083,0.0406,0.176,6341
+city,log_a,-0.0765,-0.1589,0.0058,6341
+highway,log_weight,0.3128,0.1624,0.4632,6341
+highway,log_hp,0.3529,0.2951,0.4107,6341
+highway,log_c,0.2053,0.1459,0.2648,6341
+highway,log_a,-0.0557,-0.1757,0.0643,6341

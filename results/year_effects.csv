@@ -1,0 +1,40 @@
+model,year,pct,lo,hi
+raw average,2013,0.0,0.0,0.0
+raw average,2014,-7.1,-12.283,-1.611
+raw average,2015,-5.747,-10.458,-0.788
+raw average,2016,-8.728,-12.385,-4.918
+raw average,2017,-8.686,-13.188,-3.951
+raw average,2018,-4.166,-9.245,1.198
+raw average,2019,-4.498,-9.417,0.689
+raw average,2020,-5.353,-10.829,0.459
+raw average,2021,-2.017,-7.985,4.338
+raw average,2022,-2.865,-9.033,3.722
+raw average,2023,-2.615,-7.451,2.472
+raw average,2024,-2.938,-9.334,3.91
+raw average,2025,-5.836,-15.114,4.456
+"same weight, power, body, drive",2013,0.0,0.0,0.0
+"same weight, power, body, drive",2014,-3.281,-6.342,-0.12
+"same weight, power, body, drive",2015,-5.739,-8.136,-3.279
+"same weight, power, body, drive",2016,-5.528,-7.885,-3.112
+"same weight, power, body, drive",2017,-7.413,-9.552,-5.222
+"same weight, power, body, drive",2018,-7.22,-9.678,-4.696
+"same weight, power, body, drive",2019,-6.936,-9.82,-3.959
+"same weight, power, body, drive",2020,-8.48,-10.258,-6.666
+"same weight, power, body, drive",2021,-10.612,-12.683,-8.493
+"same weight, power, body, drive",2022,-10.998,-13.837,-8.065
+"same weight, power, body, drive",2023,-12.556,-14.916,-10.13
+"same weight, power, body, drive",2024,-12.31,-14.905,-9.637
+"same weight, power, body, drive",2025,-14.381,-16.998,-11.681
+...and same engine and transmission,2013,0.0,0.0,0.0
+...and same engine and transmission,2014,-1.454,-4.234,1.407
+...and same engine and transmission,2015,-2.896,-5.157,-0.582
+...and same engine and transmission,2016,-2.415,-4.476,-0.309
+...and same engine and transmission,2017,-3.786,-5.805,-1.724
+...and same engine and transmission,2018,-2.37,-4.544,-0.147
+...and same engine and transmission,2019,-1.471,-3.89,1.008
+...and same engine and transmission,2020,-2.424,-4.185,-0.631
+...and same engine and transmission,2021,-3.655,-5.97,-1.284
+...and same engine and transmission,2022,-3.5,-5.703,-1.246
+...and same engine and transmission,2023,-4.825,-7.697,-1.862
+...and same engine and transmission,2024,-4.809,-7.844,-1.675
+...and same engine and transmission,2025,-6.389,-10.421,-2.175

@@ -1,0 +1,22 @@
+{
+  "attributes": {
+    "random 10-fold": {
+      "r2": 0.8204500577078098,
+      "median_abs_pct_error": 6.504136447710995
+    },
+    "10-fold, whole models held out": {
+      "r2": 0.814611494211949,
+      "median_abs_pct_error": 6.5844982485181225
+    }
+  },
+  "attributes + technology": {
+    "random 10-fold": {
+      "r2": 0.8693401057809904,
+      "median_abs_pct_error": 5.2681668699291695
+    },
+    "10-fold, whole models held out": {
+      "r2": 0.8631678342408413,
+      "median_abs_pct_error": 5.3876598513320495
+    }
+  }
+}

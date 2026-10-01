@@ -1,0 +1,37 @@
+{
+  "actual_log_change": -0.06013014550269036,
+  "parts_log": {
+    "heavier": 0.02571823228866803,
+    "more powerful": 0.056405670909199894,
+    "body and drive mix": 0.013007198356560515,
+    "technology (year effect)": -0.15526124705711986
+  },
+  "sum_of_parts": -0.06013014550269141,
+  "actual_pct": -5.835802485900244,
+  "parts_pct": {
+    "heavier": 2.605179947168379,
+    "more powerful": 5.802680738614585,
+    "body and drive mix": 1.309215993215762,
+    "technology (year effect)": -14.380852923854315
+  },
+  "if_size_and_power_stayed_pct": -13.259913357078478,
+  "share_of_technology_taken_back": 0.6127163304274515,
+  "mean_weight": {
+    "2013": 4212.475149105368,
+    "2025": 4580.555555555556
+  },
+  "mean_hp": {
+    "2013": 285.69383697813123,
+    "2025": 329.72222222222223
+  },
+  "mean_gpm": {
+    "2013": 3.6032365053443844,
+    "2025": 3.3966026918539014
+  },
+  "n": 6341,
+  "r2_attributes": 0.8217335885434416,
+  "r2_technology": 0.8705000087492549,
+  "share_of_year_effect_explained_by_engine_and_transmission": 0.5747949714125966,
+  "clusters": 31,
+  "models": 504
+}

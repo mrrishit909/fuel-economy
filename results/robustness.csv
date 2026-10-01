@@ -1,0 +1,6 @@
+version,n,weight_elasticity,hp_elasticity,year_2025_pct
+main,6341,0.3068,0.3766,-14.3809
+"hybrids kept, with a hybrid dummy",6840,0.2975,0.3867,-13.7007
+city test only,6341,0.3203,0.4066,-15.6833
+highway test only,6341,0.2827,0.3195,-11.8887
+each model counted once per year,1848,0.3211,0.3983,-15.909

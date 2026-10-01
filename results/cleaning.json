@@ -1,0 +1,42 @@
+[
+ [
+  "test results, model years 2012-2026",
+  66976
+ ],
+ [
+  "gasoline (EPA certification fuel)",
+  54496
+ ],
+ [
+  "city (FTP) or highway test",
+  46404
+ ],
+ [
+  "measured, not analytically derived",
+  41409
+ ],
+ [
+  "not a police or emergency vehicle",
+  41207
+ ],
+ [
+  "each test once, in its first model year (carry-overs dropped)",
+  18247
+ ],
+ [
+  "first tested 2013-2025 (2026 is a partial early release)",
+  14907
+ ],
+ [
+  "vehicles with both a city and a highway result",
+  6937
+ ],
+ [
+  "not a hybrid or plug-in",
+  6426
+ ],
+ [
+  "plausible weight and power (999 hp is a placeholder); engine, transmission and drive known",
+  6341
+ ]
+]
