@@ -28,6 +28,11 @@ def main():
     assert not s["model"].astype(str).str.upper().str.contains(A.HYBRID_NAME).any()
     assert np.allclose(s["gpm"], 0.55 * s["FTP"] + 0.45 * s["HWY"])        # combined in gallons per 100 miles, not averaged MPG
 
+    dc = json.loads((R / "data_checks.json").read_text())
+    co2 = pd.Series(dc["co2_grams_per_gallon_median_by_year"])
+    assert co2.between(8800, 8950).all() and co2.max() - co2.min() < 30, "certification fuel changed?"
+    assert dc["share_of_repeats_with_identical_result"] > 0.99
+
     f = pd.read_csv(R / "model_data.csv")
     assert len(f) == steps[-1][1]
     X = pd.get_dummies(f[["vtype", "drive", "year"]].astype(str), dtype=float)

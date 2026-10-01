@@ -43,8 +43,8 @@ analytically derived) → 41,207 not police vehicles → **18,247 after counting
    48-volt mild hybrids stay in as an engine technology.
 3. **Placeholder horsepower.** Three Audis are listed at 999 hp (an A8 has 335). They are dropped.
 
-The test fuel stays the same throughout: CO₂ × MPG is about 8,875 g per gallon every year, so no year effect comes from
-a fuel change. The 2026 file is a partial January release: 265 vehicles against 2025's 360, lighter and less powerful, with
+The test fuel stays the same throughout: the median CO₂ × MPG is 8,861–8,882 g per gallon in every year, so no year
+effect comes from a fuel change. These data checks are saved in `results/data_checks.json`. The 2026 file is a partial January release: 265 vehicles against 2025's 360, lighter and less powerful, with
 the CVT share jumping from 6% to 20% (`results/partial_2026.json`). So the comparison ends at 2025.
 
 ## Model

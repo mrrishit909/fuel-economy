@@ -165,6 +165,14 @@ def main():
     a = load()
     v, steps = clean(a)
     (out / "cleaning.json").write_text(json.dumps(steps, indent=1) + "\n")
+    gas = a[(a["Test Fuel Type Description"] == "Tier 2 Cert Gasoline") & a["Test Category"].isin(["FTP", "HWY"])
+            & (a["Analytically Derived FE?"] == "No")]
+    rep = gas.groupby("Test Number").agg(years=("year", "nunique"), results=("RND_ADJ_FE", "nunique"))
+    rep = rep[rep["years"] > 1]
+    checks = {"co2_grams_per_gallon_median_by_year": (gas["CO2 (g/mi)"] * gas["RND_ADJ_FE"]).groupby(gas["year"]).median().round(0).to_dict(),
+              "repeated_test_numbers": len(rep), "share_of_repeats_with_identical_result": round(float((rep["results"] == 1).mean()), 4),
+              "median_city_to_highway_fuel_ratio_in_sample": round(float(v.loc[v["sample"], "ratio"].median()), 3)}
+    (out / "data_checks.json").write_text(json.dumps(checks, indent=2) + "\n")
     v26, _ = clean(a, last=2026)                       # why 2026 is left out: same rules, compare its mix with 2025's
     s26 = v26[v26["sample"] & v26["year"].isin([2025, 2026])].groupby("year").agg(
         vehicles=("gpm", "size"), mean_weight=("weight", "mean"), mean_hp=("hp", "mean"), cvt_share=("trans", lambda x: (x == "CVT").mean()))
